@@ -9,3 +9,4 @@
   ### ansible all -m apt -a name=tmux --become --ask-become-pass (install tmux editor in all host machines with sudo )
   ### ansible all -m apt -a "name=snapd state=latest" --become --ask-become-pass (install snapd latest version in all host machines with sudo )
   ### ansible all -m apt -a "upgrade=dist" --become --ask-become-pass (update all packages in all host machines with sudo )
+  ### ansible-playbook --ask-become-pass install_apache.yml ( Run playbook )
