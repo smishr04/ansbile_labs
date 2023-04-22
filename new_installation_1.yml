@@ -3,13 +3,13 @@
 
 - hosts: all
   become: true
-  tasks:
+  pre_tasks:
    - name: install updates (centos)
      dnf:
       update_only: yes
       update_cache: yes
      when: ansible_distribution == "CentOS"
-   - name: install updates (centos)
+   - name: install updates (ubuntu)
      apt:
        upgrade: dist
        update_cache: yes
