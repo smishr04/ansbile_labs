@@ -37,14 +37,14 @@
   become: true
   tasks:
     - name: install mariadb package (ubuntu)
-     package: 
-       name: 
-         - mariadb-server
-       state: latest
-     when: ansible_distribution == "Ubuntu"
-   - name: install maria db (centos)
-     dnf: 
-       name: 
-         - mariadb
-       state: latest
-     when: ansible_distribution == "CentOS"
+      package: 
+        name: 
+          - mariadb-server
+        state: latest
+      when: ansible_distribution == "Ubuntu"
+    - name: install maria db (centos)
+      dnf: 
+        name: 
+          - mariadb
+        state: latest
+      when: ansible_distribution == "CentOS"
