@@ -15,7 +15,7 @@
        update_cache: yes
      when: ansible_distribution == "Ubuntu"
 
-- hosts: Web_server
+- hosts: Web_Server
   become: true
   tasks:
    - name: install apache and php package ubuntu
