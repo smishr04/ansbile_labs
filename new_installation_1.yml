@@ -19,7 +19,7 @@
   become: true
   tasks:
    - name: install apache and php package ubuntu
-     package: 
+     apt: 
        name: 
          - apache2
          - libapache2-mod-php
@@ -37,7 +37,7 @@
   become: true
   tasks:
     - name: install mariadb package (ubuntu)
-      package: 
+      apt: 
         name: 
           - mariadb-server
         state: latest
@@ -48,3 +48,13 @@
           - mariadb
         state: latest
       when: ansible_distribution == "CentOS"
+      
+- hosts: File_Server
+  become: true
+  tasks:
+    - name: install samba package
+      package: 
+        name: 
+          - samba
+        state: latest
+
