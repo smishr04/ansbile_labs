@@ -5,5 +5,5 @@ centos1
 [DB_Server]
 ubuntu2
 
-[Server_3]
+[File_Server]
 ubuntu3
