@@ -13,6 +13,9 @@
   ### ansible all -m apt -a "upgrade=dist" --become --ask-become-pass (update all packages in all host machines with sudo )
   ### ansible-playbook --ask-become-pass install_apache.yml ( Run playbook )
   ### add missing user to sudoer list  run command 1. sudo visudo 2. user_name ALL=(ALL) NOPASSWD:ALL (update the user_name to ansbile user) 
-  ### update playbook's when condition for list of OS  when: ansible_distribution in ["Ubuntu", "Debian"]
+  ### update playbook's when condition for list of OS  "when: ansible_distribution in ["Ubuntu", "Debian"]"
+  ###  update playbook's when condition for list of OS  "when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "8.4"
+  ### ansible all -m gather_facts --limit centos1 | grep ansible_distribution (fetch the ansible distribution)
+
 
 
