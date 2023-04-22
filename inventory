@@ -1,8 +1,8 @@
-[Server_1]
+[Web_Server]
 ubuntu1
 centos1
 
-[Server_2]
+[DB_Server]
 ubuntu2
 
 [Server_3]
