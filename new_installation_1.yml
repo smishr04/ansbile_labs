@@ -15,7 +15,7 @@
        update_cache: yes
      when: ansible_distribution == "Ubuntu"
 
-- hosts: Server_1
+- hosts: Web_server
   become: true
   tasks:
    - name: install apache and php package ubuntu
@@ -33,7 +33,7 @@
        state: latest
      when: ansible_distribution == "CentOS"
     
-- hosts: Server_2
+- hosts: DB_Server
   become: true
   tasks:
     - name: install mariadb package (ubuntu)
