@@ -1,5 +1,7 @@
 # ansbile_labs and projects
  ## commands to remember 
+  ### ssh hostname
+  ### ssh-copy-id -i ~/.ssh/id_rsa.pub user@hostname (copy ssh keys to machines)
   ### ansible all -m ping
   ### ansible all --list-hosts
   ### ansible all -m gather_facts
