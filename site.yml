@@ -19,7 +19,7 @@
 
 - hosts: Workstations
   become: true
-  taks:
+  tasks:
     - name: install unzip
       package:
         name: unzip
