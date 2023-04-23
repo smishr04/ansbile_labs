@@ -7,3 +7,9 @@ ubuntu2
 
 [File_Server]
 ubuntu3
+
+[Workstations]
+ubuntu1
+ubuntu2
+ubuntu3
+centos1
