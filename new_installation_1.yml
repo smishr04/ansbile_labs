@@ -38,10 +38,10 @@
      when: ansible_distribution == "CentOS"
     
 - hosts: DB_Server
-  tags: db,mariadb,ubuntu
   become: true
   tasks:
     - name: install mariadb package (ubuntu)
+      tags: db,mariadb,ubuntu
       apt: 
         name: 
           - mariadb-server
