@@ -16,6 +16,8 @@
   ### update playbook's when condition for list of OS  "when: ansible_distribution in ["Ubuntu", "Debian"]"
   ###  update playbook's when condition for list of OS  "when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "8.4"
   ### ansible all -m gather_facts --limit centos1 | grep ansible_distribution (fetch the ansible distribution)
-
+  ### ansible-playbook --list-tags new_installation_1.yml  (list tags in the playbook)
+  ### ansible-playbook --tags centos --ask-become-pass new_installation_1.yml (Run with tag)
+  ### ansible-playbook --tags "samba,db" --ask-become-pass new_installation_1.yml (Run with multiple tags)
 
 
