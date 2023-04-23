@@ -68,15 +68,6 @@
        regexp: '^ServerAdmin'
        line: ServerAdmin somebody@somewhere.com
      when: ansible_distribution == "CentOS"
-     register: httpd
-
-   - name: restart httpd (centos)
-     tags: apache,centos,httpd
-     service:
-       name: httpd
-       state: restarted
-     when: httpd.changed
-
 
    - name:  Copy default html file to site
      tags: apache,apache2,httpd
