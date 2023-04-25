@@ -35,8 +35,8 @@
       copy: 
         src: sudoer_simone
         dest: /etc/sudoers.d/simone
-        owner: root
-        group: root
+        owner: ansible
+        group: ansible
         mode: 0440
       
       
