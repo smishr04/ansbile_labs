@@ -29,7 +29,7 @@
       tags: always
       authorized_key:
         user: simone
-        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkZSHx9g+bNgwzMrlF98AIuTpwmjKvd0AluKLZKwc9qMPU71PeIgqOs/+4DTAPpmc53gVfrGWDa/HKsXLl8Onlt5RU6P3b5xY0z/laoP6368eJ/dSA35LQnHuSy5dhCnuIoyNtrife4raCe82VJjB+nfv8pFXqXNpSHaLTyg8EJaXIAVyIXDV+SPsYC498RUElriJL8Mp72JXbi2AxBM9jNc8aazAchVgS0iQLIVLpr1BTgzJOTUy7fmC7sgddTlYb7MRcO2kwDPY6031+l9fz1O9iv0TZEVKdF6M0Av5WhlZRF2c/4tldRs7CsjRCu4XuSQoCMgSCszn+49oB3yBN40Iz7qw73FzH/CymdAt/fs56SddD5RKzGQYRgFspIQ2TzTjDNcTBT8zQO0oxSERZx256Y/aea3kFtIugb2SaZZK3zXXtoM4ABeMqpr+K444hqpJDpDahlx0Ye0VnrRcZv3INDU2tzWrv4n3KVj4n9aSNYCrSX4sq0F8EolkuyGU= ansible@ubuntu-c" 
+        key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKVW5CWOwzuk+iVcr/Zf0mjUp1JPzO7HlcLPmN0oBx8o ansible@ubuntu-c" 
     - name: add sudoers file for simone
       tags: always
       copy: 
