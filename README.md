@@ -19,6 +19,6 @@
   ### ansible-playbook --list-tags new_installation_1.yml  (list tags in the playbook)
   ### ansible-playbook --tags centos --ask-become-pass new_installation_1.yml (Run with tag)
   ### ansible-playbook --tags "samba,db" --ask-become-pass new_installation_1.yml (Run with multiple tags)
-  ## cat /etc/passwd (to check users list)
+  ### cat /etc/passwd (to check users list)
 
 
