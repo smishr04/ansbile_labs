@@ -37,6 +37,6 @@
         dest: /etc/sudoers.d/simone
         owner: root
         group: root
-        mode: 0440
+        mode: 0644
 
 
