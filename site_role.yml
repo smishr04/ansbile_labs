@@ -23,22 +23,22 @@
   roles:
     - base
     
-- hosts: web_servers
+- hosts: Web_Server
   become: true
   roles:
     - web_servers
     
-- hosts: db_servers
+- hosts: DB_Server
   become: true
   roles:
     - db_servers
     
-- hosts: file_servers
+- hosts: File_Server
   become: true
   roles:
     - file_servers
     
-- hosts: workstations
+- hosts: Workstations
   become: true
   roles:
     - workstations
