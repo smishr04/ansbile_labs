@@ -78,9 +78,9 @@
         tags: apache,apache2,ubuntu 
         apt: 
           name: 
-           - apache2
-           - libapache2-mod-php
-         state: latest
+            - apache2
+            - libapache2-mod-php
+          state: latest
         when: ansible_distribution == "Ubuntu"
    
        - name: install apache and php package centos
