@@ -75,55 +75,55 @@
   tasks:
  
     - name: install apache and php package ubuntu
-     tags: apache,apache2,ubuntu 
-     apt: 
-       name: 
+      tags: apache,apache2,ubuntu 
+      apt: 
+        name: 
          - apache2
          - libapache2-mod-php
        state: latest
-     when: ansible_distribution == "Ubuntu"
+      when: ansible_distribution == "Ubuntu"
    
-   - name: install apache and php package centos
-     tags: apache,httpd,centos
-     dnf: 
-       name: 
-         - httpd
-         - php
-       state: latest
-     when: ansible_distribution == "CentOS"
+     - name: install apache and php package centos
+       tags: apache,httpd,centos
+       dnf: 
+         name: 
+           - httpd
+           - php
+         state: latest
+       when: ansible_distribution == "CentOS"
    
-   - name: start httpd (CentOS)
-     tags: apache,httpd,centos
-     service: 
-       name: httpd
-       state: started
-       enabled: yes
-     when: ansible_distribution == "CentOS"
+     - name: start httpd (CentOS)
+       tags: apache,httpd,centos
+       service: 
+         name: httpd
+         state: started
+         enabled: yes
+       when: ansible_distribution == "CentOS"
    
-   - name: change e-mail address for admin
-     tags: apache,centos,httpd
-     lineinfile: 
-       path: /etc/httpd/conf/httpd.conf
-       regexp: '^ServerAdmin'
-       line: ServerAdmin somebody@somewhere.com
-     when: ansible_distribution == "CentOS"
-     register: httpd
+     - name: change e-mail address for admin
+       tags: apache,centos,httpd
+       lineinfile: 
+         path: /etc/httpd/conf/httpd.conf
+         regexp: '^ServerAdmin'
+         line: ServerAdmin somebody@somewhere.com
+       when: ansible_distribution == "CentOS"
+       register: httpd
 
-   - name: restart httpd (centos)
-     tags: apache,centos,httpd
-     service:
-       name: httpd
-       state: restarted
-     when: httpd.changed
+     - name: restart httpd (centos)
+       tags: apache,centos,httpd
+       service:
+         name: httpd
+         state: restarted
+       when: httpd.changed
 
-   - name:  Copy default html file to site
-     tags: apache,apache2,httpd
-     copy:
-       src: default_site.html
-       dest: /var/www/html/index.html
-       owner: root
-       group: root
-       mode: 0644
+     - name:  Copy default html file to site
+       tags: apache,apache2,httpd
+       copy:
+         src: default_site.html
+         dest: /var/www/html/index.html
+         owner: root
+         group: root
+         mode: 0644
        
 - hosts: DB_Server
   become: true
