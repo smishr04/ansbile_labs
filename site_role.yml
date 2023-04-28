@@ -92,33 +92,33 @@
           state: latest
         when: ansible_distribution == "CentOS"
    
-       - name: start httpd (CentOS)
-         tags: apache,httpd,centos
-         service: 
+      - name: start httpd (CentOS)
+        tags: apache,httpd,centos
+        service: 
            name: httpd
            state: started
            enabled: yes
-         when: ansible_distribution == "CentOS"
+        when: ansible_distribution == "CentOS"
 
-       - name: change e-mail address for admin
-         tags: apache,centos,httpd
-         lineinfile: 
+      - name: change e-mail address for admin
+        tags: apache,centos,httpd
+        lineinfile: 
            path: /etc/httpd/conf/httpd.conf
            regexp: '^ServerAdmin'
            line: ServerAdmin somebody@somewhere.com
-         when: ansible_distribution == "CentOS"
-         register: httpd
+        when: ansible_distribution == "CentOS"
+        register: httpd
 
-       - name: restart httpd (centos)
-         tags: apache,centos,httpd
-         service:
+      - name: restart httpd (centos)
+        tags: apache,centos,httpd
+        service:
            name: httpd
            state: restarted
-         when: httpd.changed
+        when: httpd.changed
 
-       - name:  Copy default html file to site
-         tags: apache,apache2,httpd
-         copy:
+      - name:  Copy default html file to site
+        tags: apache,apache2,httpd
+        copy:
            src: default_site.html
            dest: /var/www/html/index.html
            owner: root
