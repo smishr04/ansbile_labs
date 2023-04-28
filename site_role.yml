@@ -83,14 +83,14 @@
           state: latest
         when: ansible_distribution == "Ubuntu"
    
-       - name: install apache and php package centos
-         tags: apache,httpd,centos
-         dnf: 
-           name: 
+      - name: install apache and php package centos
+        tags: apache,httpd,centos
+        dnf: 
+          name: 
              - httpd
              - php
-           state: latest
-         when: ansible_distribution == "CentOS"
+          state: latest
+        when: ansible_distribution == "CentOS"
    
        - name: start httpd (CentOS)
          tags: apache,httpd,centos
