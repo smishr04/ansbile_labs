@@ -6,17 +6,17 @@
   pre_tasks:
 
     - name: update repo cache (centos)
-     tags: always
-     dnf:
-       update_cache: yes
-     changed_when: false
-     when: ansible_distribution == "CentOS"
-   - name: update repo cache (ubuntu)
-     tags: always
-     apt:
-       update_cache: yes
-     changed_when: false
-     when: ansible_distribution == "Ubuntu"
+      tags: always
+      dnf:
+        update_cache: yes
+        changed_when: false
+      when: ansible_distribution == "CentOS"
+    - name: update repo cache (ubuntu)
+      tags: always
+      apt:
+        update_cache: yes
+        changed_when: false
+      when: ansible_distribution == "Ubuntu"
      
 - hosts: all
   become: true
